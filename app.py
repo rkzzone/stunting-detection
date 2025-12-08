@@ -894,7 +894,9 @@ def render_dashboard():
         """, unsafe_allow_html=True)
     
     with col2:
-        image_path = os.path.join(r"C:\Users\muham\Project\Stunting", "image", "apaitustunting.png")
+        # Get the directory where app.py is located
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        image_path = os.path.join(current_dir, "image", "apaitustunting.png")
         if os.path.exists(image_path):
             st.image(image_path, use_container_width=True)
         else:
@@ -1563,7 +1565,9 @@ def main():
     # Sidebar
     with st.sidebar:
         # Logo with center alignment
-        logo_path = os.path.join(r"C:\Users\muham\Project\Stunting", "image", "logo.jpg")
+        # Get the directory where app.py is located
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        logo_path = os.path.join(current_dir, "image", "logo.jpg")
         if os.path.exists(logo_path):
             col1, col2, col3 = st.columns([1, 1, 1])
             with col2:

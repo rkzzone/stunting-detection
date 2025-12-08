@@ -1165,7 +1165,7 @@ def render_detection():
     header_gradient = f"linear-gradient(135deg, {COLORS['primary']} 0%, {COLORS['secondary']} 100%)"
     st.markdown(f"""
     <div class="detection-header" style="background: {header_gradient};">
-        <h1 style="margin: 0;">🔍 Kalkulator Gizi & Deteksi Dini Stunting</h1>
+        <h1 style="margin: 0;">🔍 Status Gizi & Deteksi Dini Stunting</h1>
         <p style="opacity: 0.9; margin-top: 0.5rem;">
             Analisis status gizi anak berdasarkan standar WHO dan Model Machine Learning
         </p>

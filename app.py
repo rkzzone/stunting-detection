@@ -580,11 +580,17 @@ def load_models():
     """Load WHO Z-Score Calculator and KNN Model"""
     zscore_calc = WHOZScoreCalculator()
     
-    knn_model = StuntingKNNModel(r"C:\Users\muham\Project\Stunting\data_balita.csv")
+    # Get the directory where app.py is located
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    data_path = os.path.join(current_dir, "data_balita.csv")
+    model_path = os.path.join(current_dir, "models")
+    
+    knn_model = StuntingKNNModel(data_path)
     try:
-        knn_model.load_model(r"C:\Users\muham\Project\Stunting\models")
-    except:
-        st.warning("⚠️ Model KNN belum di-training. Jalankan knn_model_trainer.py terlebih dahulu.")
+        knn_model.load_model(model_path)
+        st.success("✅ Model loaded successfully")
+    except Exception as e:
+        st.warning(f"⚠️ Model KNN tidak tersedia. Pastikan model sudah di-training terlebih dahulu.")
         return zscore_calc, None
     
     return zscore_calc, knn_model

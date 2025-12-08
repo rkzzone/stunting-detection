@@ -588,7 +588,7 @@ def load_models():
     knn_model = StuntingKNNModel(data_path)
     try:
         knn_model.load_model(model_path)
-        st.success("✅ Model loaded successfully")
+        # Model loaded successfully (silently)
     except Exception as e:
         st.warning(f"⚠️ Model KNN tidak tersedia. Pastikan model sudah di-training terlebih dahulu.")
         return zscore_calc, None

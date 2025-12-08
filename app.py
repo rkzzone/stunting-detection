@@ -41,7 +41,7 @@ st.set_page_config(
 COLORS_LIGHT = {
     'primary': '#8FC0A9',
     'secondary': '#68B0AB',
-    'accent': "#D5D5D5",  # Light grey for sidebar
+    'accent': "#F0F0F0",  # Light grey for sidebar
     'success': '#10B981',
     'warning': '#F59E0B',
     'danger': '#DC2626',

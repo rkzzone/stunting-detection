@@ -1278,12 +1278,17 @@ def render_detection():
             
             # 2. KNN Model Prediction (if available)
             knn_result = None
-            if knn_model is not None:
+            risk_interpretation = None
+            
+            # KNN model hanya akurat untuk usia 0-60 bulan (data training range)
+            if knn_model is not None and age_months <= 60:
                 try:
                     knn_result = knn_model.predict(age_months, gender, height_cm)
                     risk_interpretation = knn_model.get_risk_interpretation(knn_result['risk_percentage'])
                 except Exception as e:
                     st.warning(f"⚠️ Model KNN error: {str(e)}")
+            elif age_months > 60:
+                st.info("ℹ️ **Model KNN tidak tersedia untuk usia > 60 bulan (5 tahun)**. Model KNN di-training dengan data anak usia 0-60 bulan, sehingga prediksi untuk usia di luar range ini tidak akurat. Gunakan hasil WHO Z-Score sebagai acuan utama.")
             
             # Save to session state
             st.session_state.detection_result = {
@@ -1450,7 +1455,15 @@ def render_detection():
                     st.dataframe(prob_df, use_container_width=True, hide_index=True)
             
             else:
-                st.warning("⚠️ Model KNN tidak tersedia. Pastikan model sudah di-training terlebih dahulu.")
+                st.info("""
+                ℹ️ **Model KNN Tidak Tersedia**
+                
+                Model KNN hanya tersedia untuk anak usia **0-60 bulan (0-5 tahun)** karena model 
+                di-training dengan data pada rentang usia tersebut. 
+                
+                Untuk usia di luar range ini, silakan gunakan **hasil WHO Z-Score** sebagai acuan utama, 
+                yang memiliki standar untuk semua kelompok usia.
+                """)
         
         # TAB 3: Recommendations
         with tab3:

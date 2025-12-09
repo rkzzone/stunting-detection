@@ -1157,7 +1157,7 @@ def render_dashboard():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.info("**🏥 Puskesmas Terdekat**  \nKonsultasikan kondisi anak Anda secara berkala   \nTelepon: (021) 5476423")
+        st.info("**🏥 Puskesmas Terdekat**  \nKonsultasikan kondisi anak secara berkala   \nTelepon: (021) 5476423")
     
     with col2:
         st.info("**👶 Posyandu**  \nTimbang dan ukur anak setiap bulan   \n")

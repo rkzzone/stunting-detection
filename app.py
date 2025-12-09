@@ -1170,11 +1170,16 @@ def render_dashboard():
         st.info("**📱 Halo Kemenkes**  \nTelepon: (Kode Lokal) 1500-567  \nSMS: 0812-8156-2620")
     
     st.markdown("---")
-    st.markdown("""
-    <div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: rgba(248, 250, 251, 0.98); 
-                padding: 1rem 0; text-align: center; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 999;
+    
+    # Footer background dan text color berdasarkan theme
+    footer_bg = "rgba(248, 250, 251, 0.98)" if st.session_state.theme == 'light' else "rgba(26, 32, 44, 0.98)"
+    footer_text = "#888" if st.session_state.theme == 'light' else "#E2E8F0"
+    
+    st.markdown(f"""
+    <div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: {footer_bg}; 
+                padding: 1rem 0; text-align: center; box-shadow: 0 -2px 10px rgba(0,0,0,0.3); z-index: 999;
                 backdrop-filter: blur(10px);">
-        <p style="margin: 0; color: #888; font-size: 0.9rem;">
+        <p style="margin: 0; color: {footer_text}; font-size: 0.9rem;">
             💡 <strong>Website ini adalah alat screening awal.</strong> Untuk diagnosis dan penanganan yang tepat, 
             selalu konsultasikan dengan tenaga medis profesional.
         </p>

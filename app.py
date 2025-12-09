@@ -1160,7 +1160,7 @@ def render_dashboard():
         st.info("**🏥 Puskesmas Terdekat**  \nKonsultasikan kondisi anak berkala   \nTelepon: (021) 5476423")
     
     with col2:
-        st.info("**👶 Posyandu**  \nTimbang dan ukur anak setiap bulan   \n")
+        st.info("**👶 Posyandu**  \nTimbang dan ukur anak setiap bulan   \nUntuk memantau tumbuh kembangnya")
     
     with col3:
         st.info("**📱 Hotline Kesehatan (Halo Kemenkes)**  \nTelepon: (Kode Lokal) 1500-567  \nSMS: 0812-8156-2620")

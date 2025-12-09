@@ -568,7 +568,47 @@ st.markdown(f"""
         transform: scale(1.05) !important;
         box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
     }}
+    
+    /* Fixed Footer */
+    .app-footer {{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: {COLORS['card_bg']};
+        color: {COLORS['text_light']};
+        text-align: center;
+        padding: 1rem 2rem;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        z-index: 999;
+        border-top: 2px solid {COLORS['primary']};
+    }}
+    
+    .app-footer p {{
+        margin: 0;
+        color: {COLORS['text_light']} !important;
+        font-size: 0.9rem;
+    }}
+    
+    .app-footer strong {{
+        color: {COLORS['text_dark']} !important;
+    }}
+    
+    /* Add padding to main content to prevent overlap with footer */
+    .main .block-container {{
+        padding-bottom: 80px !important;
+    }}
 </style>
+""", unsafe_allow_html=True)
+
+# Add footer HTML
+st.markdown("""
+<div class="app-footer">
+    <p>
+        💡 <strong>Website ini adalah alat screening awal.</strong> Untuk diagnosis dan penanganan yang tepat, 
+        selalu konsultasikan dengan tenaga medis profesional.
+    </p>
+</div>
 """, unsafe_allow_html=True)
 
 # =====================================================
@@ -1145,14 +1185,6 @@ def render_dashboard():
     
     with col3:
         st.info("**📱 Hotline Kesehatan**\n\nHubungi (Halo Kemenkes): \n\nTelepon: (Kode Lokal) 1500-567 \n\nSMS: 0812-8156-2620")
-    
-    st.markdown("---")
-    st.markdown("""
-    <p style="text-align: center; color: #888; font-size: 0.9rem;">
-        💡 <strong>Website ini adalah alat screening awal.</strong> Untuk diagnosis dan penanganan yang tepat, 
-        selalu konsultasikan dengan tenaga medis profesional.
-    </p>
-    """, unsafe_allow_html=True)
 
 # =====================================================
 # PAGE: DETEKSI STUNTING

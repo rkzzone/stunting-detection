@@ -1182,7 +1182,7 @@ def render_detection():
     st.markdown("""
     <style>
         .detection-page {
-            padding-bottom: 200px;
+            padding-bottom: 80px;
         }
     </style>
     <div class="detection-page">

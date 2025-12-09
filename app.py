@@ -1171,10 +1171,14 @@ def render_dashboard():
     
     st.markdown("---")
     st.markdown("""
-    <p style="text-align: center; color: #888; font-size: 0.9rem;">
-        💡 <strong>Website ini adalah alat screening awal.</strong> Untuk diagnosis dan penanganan yang tepat, 
-        selalu konsultasikan dengan tenaga medis profesional.
-    </p>
+    <div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: rgba(248, 250, 251, 0.98); 
+                padding: 1rem 0; text-align: center; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 999;
+                backdrop-filter: blur(10px);">
+        <p style="margin: 0; color: #888; font-size: 0.9rem;">
+            💡 <strong>Website ini adalah alat screening awal.</strong> Untuk diagnosis dan penanganan yang tepat, 
+            selalu konsultasikan dengan tenaga medis profesional.
+        </p>
+    </div>
     """, unsafe_allow_html=True)
 
 # =====================================================

@@ -1178,6 +1178,16 @@ def render_dashboard():
 def render_detection():
     """Render halaman deteksi stunting"""
     
+    # Container dengan padding bottom untuk footer
+    st.markdown("""
+    <style>
+        .detection-page {
+            padding-bottom: 80px;
+        }
+    </style>
+    <div class="detection-page">
+    """, unsafe_allow_html=True)
+    
     # Header
     header_gradient = f"linear-gradient(135deg, {COLORS['primary']} 0%, {COLORS['secondary']} 100%)"
     st.markdown(f"""
@@ -1562,6 +1572,9 @@ def render_detection():
                 </p>
             </div>
             """, unsafe_allow_html=True)
+    
+    # Close detection page container
+    st.markdown("</div>", unsafe_allow_html=True)
 
 # =====================================================
 # MAIN APPLICATION

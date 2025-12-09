@@ -1157,13 +1157,13 @@ def render_dashboard():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.info("**🏥 Puskesmas Terdekat**\n\nKonsultasikan kondisi anak Anda secara berkala")
+        st.info("**🏥 Puskesmas Terdekat**  \nKonsultasikan kondisi anak Anda secara berkala")
     
     with col2:
-        st.info("**👶 Posyandu**\n\nTimbang dan ukur anak setiap bulan")
+        st.info("**👶 Posyandu**  \nTimbang dan ukur anak setiap bulan")
     
     with col3:
-        st.info("**📱 Hotline Kesehatan**\n\nHubungi (Halo Kemenkes): \nTelepon: (Kode Lokal) 1500-567 \nSMS: 0812-8156-2620")
+        st.info("**📱 Hotline Kesehatan**  \nHubungi (Halo Kemenkes):  \nTelepon: (Kode Lokal) 1500-567  \nSMS: 0812-8156-2620")
     
     st.markdown("---")
     st.markdown("""

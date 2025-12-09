@@ -1,0 +1,10 @@
+# Minimal requirements - let pip resolve dependencies
+streamlit
+pandas
+numpy
+scikit-learn
+scipy
+plotly
+reportlab
+joblib
+openpyxl

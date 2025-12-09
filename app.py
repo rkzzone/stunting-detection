@@ -1608,7 +1608,7 @@ def main():
         - **Machine Learning** (KNN Model)
         
         **Versi:** 1.0  
-        **Tahun:** 2024
+        **Tahun:** 2025
         """)
         
         st.markdown("---")

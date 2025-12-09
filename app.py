@@ -1170,21 +1170,6 @@ def render_dashboard():
         st.info("**📱 Halo Kemenkes**  \nTelepon: (Kode Lokal) 1500-567  \nSMS: 0812-8156-2620")
     
     st.markdown("---")
-    
-    # Footer background dan text color berdasarkan theme
-    footer_bg = "rgba(248, 250, 251, 0.98)" if st.session_state.theme == 'light' else "rgba(26, 32, 44, 0.98)"
-    footer_text = "#888" if st.session_state.theme == 'light' else "#E2E8F0"
-    
-    st.markdown(f"""
-    <div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: {footer_bg}; 
-                padding: 1rem 0; text-align: center; box-shadow: 0 -2px 10px rgba(0,0,0,0.3); z-index: 999;
-                backdrop-filter: blur(10px);">
-        <p style="margin: 0; color: {footer_text}; font-size: 0.9rem;">
-            💡 <strong>Website ini adalah alat screening awal.</strong> Untuk diagnosis dan penanganan yang tepat, 
-            selalu konsultasikan dengan tenaga medis profesional.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
 
 # =====================================================
 # PAGE: DETEKSI STUNTING
@@ -1263,15 +1248,6 @@ def render_detection():
             use_container_width=True,
             type="primary"
         )
-    
-    # Disclaimer
-    st.markdown("""
-    <div class="alert-box alert-warning" style="margin-top: 2rem;">
-        <strong>⚠️ Disclaimer:</strong> Website ini adalah alat screening awal dan bukan keputusan final. 
-        Hasil analisis harus dikonsultasikan dengan tenaga medis terpercaya (Bidan/Dokter/Puskesmas) 
-        untuk diagnosis dan penanganan yang tepat.
-    </div>
-    """, unsafe_allow_html=True)
     
     # =====================================================
     # ANALYSIS & RESULTS
@@ -1661,6 +1637,21 @@ def main():
         render_dashboard()
     elif st.session_state.page == 'detection':
         render_detection()
+    
+    # Footer sticky - muncul di semua halaman
+    footer_bg = "rgba(248, 250, 251, 0.98)" if st.session_state.theme == 'light' else "rgba(26, 32, 44, 0.98)"
+    footer_text = "#888" if st.session_state.theme == 'light' else "#E2E8F0"
+    
+    st.markdown(f"""
+    <div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: {footer_bg}; 
+                padding: 1rem 0; text-align: center; box-shadow: 0 -2px 10px rgba(0,0,0,0.3); z-index: 999;
+                backdrop-filter: blur(10px);">
+        <p style="margin: 0; color: {footer_text}; font-size: 0.9rem;">
+            💡 <strong>Website ini adalah alat screening awal.</strong> Untuk diagnosis dan penanganan yang tepat, 
+            selalu konsultasikan dengan tenaga medis profesional.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
 
 # Run the application
 if __name__ == "__main__":

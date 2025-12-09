@@ -1010,7 +1010,7 @@ def render_dashboard():
     # Section: Pencegahan (General)
     st.markdown("## 🛡️ Pencegahan Stunting")
     
-    col1, col2, col3, col4 = st.columns([1, 1.1, 0.8, 1.1])
+    col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
     
     prevention_steps = [
         {

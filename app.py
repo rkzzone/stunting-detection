@@ -886,16 +886,14 @@ def render_footer():
     st.markdown('<div class="app-footer">', unsafe_allow_html=True)
     
     st.markdown("## 📞 Informasi & Kontak")
-    col1, col2, col3 = st.columns(3)
     
-    with col1:
-        st.info("**🏥 Puskesmas Terdekat**\n\nKonsultasikan kondisi anak Anda secara berkala")
+    st.markdown("""
+    **🏥 Puskesmas Terdekat** - Konsultasikan kondisi anak Anda secara berkala
     
-    with col2:
-        st.info("**👶 Posyandu**\n\nTimbang dan ukur anak setiap bulan")
+    **👶 Posyandu** - Timbang dan ukur anak setiap bulan
     
-    with col3:
-        st.info("**📱 Hotline Kesehatan**\n\nHubungi (Halo Kemenkes): \n\nTelepon: (Kode Lokal) 1500-567 \n\nSMS: 0812-8156-2620")
+    **📱 Hotline Kesehatan** - Hubungi (Halo Kemenkes): Telepon: (Kode Lokal) 1500-567 | SMS: 0812-8156-2620
+    """)
     
     st.markdown("""
     <p>

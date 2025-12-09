@@ -179,9 +179,10 @@ st.markdown(f"""
         margin-bottom: 1.5rem;
         transition: transform 0.3s ease;
         border-left: 5px solid {COLORS['primary']};
-        min-height: 280px;
+        height: 320px;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
     }}
     
     .info-card:hover {{

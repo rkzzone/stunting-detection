@@ -173,17 +173,16 @@ st.markdown(f"""
     /* Info Cards */
     .info-card {{
         background: {COLORS['card_bg']} !important;
-        padding: 2rem;
+        padding: 1.5rem;
         border-radius: 15px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         margin-bottom: 1.5rem;
         transition: transform 0.3s ease;
         border-left: 5px solid {COLORS['primary']};
-        height: 320px;
+        min-height: 280px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        overflow: hidden;
     }}
     
     .info-card:hover {{
@@ -192,25 +191,24 @@ st.markdown(f"""
     }}
     
     .card-icon {{
-        font-size: 3rem;
-        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
         flex-shrink: 0;
     }}
     
     .card-title {{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: 600;
         color: {COLORS['text_dark']} !important;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.7rem;
         flex-shrink: 0;
         line-height: 1.3;
     }}
     
     .card-text {{
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         line-height: 1.5;
         color: {COLORS['text_light']} !important;
-        overflow: hidden;
         flex: 1;
     }}
     

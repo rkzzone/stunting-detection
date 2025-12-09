@@ -183,6 +183,7 @@ st.markdown(f"""
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        overflow: hidden;
     }}
     
     .info-card:hover {{
@@ -193,19 +194,24 @@ st.markdown(f"""
     .card-icon {{
         font-size: 3rem;
         margin-bottom: 1rem;
+        flex-shrink: 0;
     }}
     
     .card-title {{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 600;
         color: {COLORS['text_dark']} !important;
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem;
+        flex-shrink: 0;
+        line-height: 1.3;
     }}
     
     .card-text {{
-        font-size: 1rem;
-        line-height: 1.6;
+        font-size: 0.95rem;
+        line-height: 1.5;
         color: {COLORS['text_light']} !important;
+        overflow: hidden;
+        flex: 1;
     }}
     
     .info-card p, .info-card span, .info-card li, .info-card strong {{
@@ -1163,7 +1169,7 @@ def render_dashboard():
         st.info("**👶 Posyandu**  \nTimbang dan ukur anak setiap bulan   \nUntuk memantau tumbuh kembangnya")
     
     with col3:
-        st.info("**📱 Hotline Kesehatan (Halo Kemenkes)**  \nTelepon: (Kode Lokal) 1500-567  \nSMS: 0812-8156-2620")
+        st.info("**📱 Halo Kemenkes**  \nTelepon: (Kode Lokal) 1500-567  \nSMS: 0812-8156-2620")
     
     st.markdown("---")
     st.markdown("""

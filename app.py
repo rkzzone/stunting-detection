@@ -1006,28 +1006,28 @@ def render_dashboard():
     # Section: Pencegahan (General)
     st.markdown("## 🛡️ Pencegahan Stunting")
     
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4 = st.columns([0.9, 1.1, 0.9, 1.1])
     
     prevention_steps = [
         {
             'icon': '🚰',
             'title': 'Sanitasi Bersih',
-            'description': 'Akses air bersih dan jamban sehat. Stop BABS'
+            'description': 'Akses air bersih dan jamban sehat. Stop BABS (Buang Air Besar Sembarangan)'
         },
         {
             'icon': '🍽️',
             'title': 'Nutrisi Seimbang',
-            'description': 'Pola makan gizi seimbang dengan prinsip Isi Piringku'
+            'description': 'Pola makan gizi seimbang dengan prinsip "Isi Piringku" dan protein hewani      '
         },
         {
             'icon': '👨‍👩‍👧',
             'title': 'Pola Asuh',
-            'description': 'Orang tua paham kesehatan, gizi, dan stimulasi anak'
+            'description': 'Orang tua yang paham kesehatan, gizi, dan stimulasi tumbuh kembang anak'
         },
         {
             'icon': '💉',
             'title': 'Imunisasi Lengkap',
-            'description': 'Lengkapi imunisasi dasar sesuai jadwal Posyandu'
+            'description': 'Melengkapi imunisasi dasar di Posyandu sesuai jadwal pemerintah          '
         }
     ]
     

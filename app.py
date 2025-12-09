@@ -1012,22 +1012,22 @@ def render_dashboard():
         {
             'icon': '🚰',
             'title': 'Sanitasi Bersih',
-            'description': 'Akses air bersih dan jamban sehat. Stop BABS (Buang Air Besar Sembarangan)'
+            'description': 'Akses air bersih dan jamban sehat. Stop BABS'
         },
         {
             'icon': '🍽️',
             'title': 'Nutrisi Seimbang',
-            'description': 'Pola makan gizi seimbang dengan prinsip "Isi Piringku" dan protein hewani      '
+            'description': 'Pola makan gizi seimbang dengan prinsip Isi Piringku'
         },
         {
             'icon': '👨‍👩‍👧',
             'title': 'Pola Asuh',
-            'description': 'Orang tua yang paham kesehatan, gizi, dan stimulasi tumbuh kembang anak'
+            'description': 'Orang tua paham kesehatan, gizi, dan stimulasi anak'
         },
         {
             'icon': '💉',
             'title': 'Imunisasi Lengkap',
-            'description': 'Melengkapi imunisasi dasar di Posyandu sesuai jadwal pemerintah          '
+            'description': 'Lengkapi imunisasi dasar sesuai jadwal Posyandu'
         }
     ]
     

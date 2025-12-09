@@ -96,10 +96,19 @@ st.markdown(f"""
     /* Main Background */
     .main {{
         background-color: {COLORS['background']} !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
     }}
     
     .stApp {{
         background-color: {COLORS['background']} !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }}
+    
+    /* Remove default bottom spacing */
+    .block-container {{
+        padding-bottom: 1rem !important;
     }}
     
     /* Hero Section - MUST BE BEFORE general text rules */
@@ -1172,7 +1181,7 @@ def render_dashboard():
         - Atasi diare kronis yang menghambat penyerapan gizi
         - Pemeriksaan kesehatan menyeluruh
         - Suplemen vitamin jika diperlukan
-        
+
         ### 4️⃣ Rujukan Medis
         - Segera konsultasi ke Dokter Spesialis Anak
         - Bawa hasil pengukuran rutin dari Posyandu

@@ -179,7 +179,7 @@ st.markdown(f"""
         margin-bottom: 1.5rem;
         transition: transform 0.3s ease;
         border-left: 5px solid {COLORS['primary']};
-        height: 260px;
+        min-height: 280px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -940,7 +940,7 @@ def render_dashboard():
         <div class="info-card">
             <div class="card-icon">📏</div>
             <h3 class="card-title">Pertumbuhan Melambat</h3>
-            <p class="card-text">Tinggi badan lebih pendek dari anak seusianya</p>
+            <p class="card-text">Tinggi badan lebih pendek dari anak seusianya dan pertumbuhan gigi terlambat</p>
         </div>
         """, unsafe_allow_html=True)
     
@@ -949,7 +949,7 @@ def render_dashboard():
         <div class="info-card">
             <div class="card-icon">👦</div>
             <h3 class="card-title">Tampak Lebih Muda</h3>
-            <p class="card-text">Wajah lebih muda dari anak seusianya</p>
+            <p class="card-text">Wajah terlihat lebih muda dari anak seusianya, namun tubuh tidak berkembang</p>
         </div>
         """, unsafe_allow_html=True)
     
@@ -958,7 +958,7 @@ def render_dashboard():
         <div class="info-card">
             <div class="card-icon">🧠</div>
             <h3 class="card-title">Sulit Fokus</h3>
-            <p class="card-text">Kemampuan memori dan belajar kurang baik</p>
+            <p class="card-text">Kemampuan memori dan belajar kurang baik, serta kurang aktif bermain</p>
         </div>
         """, unsafe_allow_html=True)
     
@@ -967,7 +967,7 @@ def render_dashboard():
         <div class="info-card">
             <div class="card-icon">🤒</div>
             <h3 class="card-title">Mudah Sakit</h3>
-            <p class="card-text">Sistem kekebalan tubuh rendah</p>
+            <p class="card-text">Sistem kekebalan tubuh rendah sehingga rentan terkena penyakit infeksi</p>
         </div>
         """, unsafe_allow_html=True)
     

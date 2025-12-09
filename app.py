@@ -96,19 +96,10 @@ st.markdown(f"""
     /* Main Background */
     .main {{
         background-color: {COLORS['background']} !important;
-        padding-bottom: 0 !important;
-        margin-bottom: 0 !important;
     }}
     
     .stApp {{
         background-color: {COLORS['background']} !important;
-        padding-bottom: 0 !important;
-        margin-bottom: 0 !important;
-    }}
-    
-    /* Remove default bottom spacing */
-    .block-container {{
-        padding-bottom: 1rem !important;
     }}
     
     /* Hero Section - MUST BE BEFORE general text rules */
@@ -577,24 +568,6 @@ st.markdown(f"""
         transform: scale(1.05) !important;
         box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
     }}
-    
-    /* Footer Styling */
-    .app-footer {{
-        background-color: {COLORS['card_bg']};
-        padding: 2rem 1rem 1rem 1rem;
-        margin-top: 3rem;
-    }}
-    
-    .app-footer p {{
-        text-align: center;
-        color: {COLORS['text_light']} !important;
-        font-size: 0.9rem;
-        margin: 1rem 0 0 0;
-    }}
-    
-    .app-footer strong {{
-        color: {COLORS['text_dark']} !important;
-    }}
 </style>
 """, unsafe_allow_html=True)
 
@@ -877,34 +850,6 @@ def generate_pdf_report(result):
     return buffer
 
 # =====================================================
-# FOOTER FUNCTION
-# =====================================================
-
-def render_footer():
-    """Render footer with contact info and disclaimer"""
-    st.markdown("---")
-    st.markdown('<div class="app-footer">', unsafe_allow_html=True)
-    
-    st.markdown("## 📞 Informasi & Kontak")
-    
-    st.markdown("""
-    **🏥 Puskesmas Terdekat** - Konsultasikan kondisi anak Anda secara berkala
-    
-    **👶 Posyandu** - Timbang dan ukur anak setiap bulan
-    
-    **📱 Hotline Kesehatan** - Hubungi (Halo Kemenkes): Telepon: (Kode Lokal) 1500-567 | SMS: 0812-8156-2620
-    """)
-    
-    st.markdown("""
-    <p>
-        💡 <strong>Website ini adalah alat screening awal.</strong> Untuk diagnosis dan penanganan yang tepat, 
-        selalu konsultasikan dengan tenaga medis profesional.
-    </p>
-    """, unsafe_allow_html=True)
-    
-    st.markdown('</div>', unsafe_allow_html=True)
-
-# =====================================================
 # PAGE: DASHBOARD (EDUKASI)
 # =====================================================
 
@@ -1178,7 +1123,7 @@ def render_dashboard():
         - Atasi diare kronis yang menghambat penyerapan gizi
         - Pemeriksaan kesehatan menyeluruh
         - Suplemen vitamin jika diperlukan
-
+        
         ### 4️⃣ Rujukan Medis
         - Segera konsultasi ke Dokter Spesialis Anak
         - Bawa hasil pengukuran rutin dari Posyandu
@@ -1186,8 +1131,28 @@ def render_dashboard():
         - Jangan tunda penanganan medis
         """)
     
-    # Call footer function
-    render_footer()
+    st.markdown("---")
+    
+    # Footer
+    st.markdown("## 📞 Informasi & Kontak")
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.info("**🏥 Puskesmas Terdekat**\n\nKonsultasikan kondisi anak Anda secara berkala")
+    
+    with col2:
+        st.info("**👶 Posyandu**\n\nTimbang dan ukur anak setiap bulan")
+    
+    with col3:
+        st.info("**📱 Hotline Kesehatan**\n\nHubungi (Halo Kemenkes): \n\nTelepon: (Kode Lokal) 1500-567 \n\nSMS: 0812-8156-2620")
+    
+    st.markdown("---")
+    st.markdown("""
+    <p style="text-align: center; color: #888; font-size: 0.9rem;">
+        💡 <strong>Website ini adalah alat screening awal.</strong> Untuk diagnosis dan penanganan yang tepat, 
+        selalu konsultasikan dengan tenaga medis profesional.
+    </p>
+    """, unsafe_allow_html=True)
 
 # =====================================================
 # PAGE: DETEKSI STUNTING
@@ -1589,9 +1554,6 @@ def render_detection():
                 </p>
             </div>
             """, unsafe_allow_html=True)
-    
-    # Call footer function
-    render_footer()
 
 # =====================================================
 # MAIN APPLICATION

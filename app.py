@@ -1017,7 +1017,7 @@ def render_dashboard():
         {
             'icon': '🍽️',
             'title': 'Nutrisi Seimbang',
-            'description': 'Pola makan gizi seimbang dengan prinsip "Isi Piringku" dan protein hewani'
+            'description': 'Pola makan gizi seimbang dengan prinsip "Isi Piringku" dan protein hewani      '
         },
         {
             'icon': '👨‍👩‍👧',
@@ -1027,7 +1027,7 @@ def render_dashboard():
         {
             'icon': '💉',
             'title': 'Imunisasi Lengkap',
-            'description': 'Melengkapi imunisasi dasar di Posyandu sesuai jadwal pemerintah'
+            'description': 'Melengkapi imunisasi dasar di Posyandu sesuai jadwal pemerintah          '
         }
     ]
     

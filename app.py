@@ -583,7 +583,6 @@ st.markdown(f"""
         background-color: {COLORS['card_bg']};
         padding: 2rem 1rem 1rem 1rem;
         margin-top: 3rem;
-        border-top: 2px solid {COLORS['primary']};
     }}
     
     .app-footer p {{
